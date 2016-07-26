@@ -17,11 +17,7 @@ namespace GITPracticeConsoleApplication
             else
             {
                 // Intimate the users to input their name
-<<<<<<< HEAD
-                Console.Write("Enter Your Name:");
-=======
                 Console.Write("Enter Your Name: ");
->>>>>>> Develop
 
                 // Get user input from the console window
                 string strUserLine = Console.ReadLine();
@@ -29,13 +25,9 @@ namespace GITPracticeConsoleApplication
                 // Show the result
                 Console.Write("You typed ");
                 Console.Write(strUserLine.Length);
-<<<<<<< HEAD
                 Console.WriteLine(" character(s) excluding newline.");
-=======
-                Console.WriteLine(" character(s)");
                 new Program().WriteToFile("GITPractice_ConsoleApp-Output.txt",
                                           "User entered:" + strUserLine);
->>>>>>> Develop
             }
         }
 
