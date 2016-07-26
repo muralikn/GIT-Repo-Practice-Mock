@@ -15,10 +15,8 @@ namespace GITPracticeConsoleApplication
             }
             else
             {
-                Console.WriteLine("Hello World");
-
                 // Intimate the users to input their name
-                Console.Write("Enter Your Name: No i wont");
+                Console.Write("Enter Your Name:");
 
                 // Get user input from the console window
                 string strUserLine = Console.ReadLine();
@@ -26,7 +24,7 @@ namespace GITPracticeConsoleApplication
                 // Show the result
                 Console.Write("You typed ");
                 Console.Write(strUserLine.Length);
-                Console.WriteLine(" character(s)");
+                Console.WriteLine(" character(s) excluding newline.");
             }
         }
 
