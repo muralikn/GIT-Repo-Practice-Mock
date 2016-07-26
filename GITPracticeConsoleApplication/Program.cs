@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 
 namespace GITPracticeConsoleApplication
 {
@@ -27,6 +28,8 @@ namespace GITPracticeConsoleApplication
                 Console.Write("You typed ");
                 Console.Write(strUserLine.Length);
                 Console.WriteLine(" character(s)");
+                new Program().WriteToFile("GITPractice_ConsoleApp-Output.txt",
+                                          "User entered:" + strUserLine);
             }
         }
 
@@ -37,6 +40,26 @@ namespace GITPracticeConsoleApplication
             foreach (string strCmd in cmdLineArgs)
             {
                 Console.WriteLine(strCmd);
+            }
+            WriteToFile("GITPractice_ConsoleApp-Output.txt", "Number of command line arguments:" + cmdLineArgs.Length);
+        }
+
+        // Function to push the command line args or the user's console input
+        // into a text file
+        private void WriteToFile(string strFilename, string strMessage)
+        {
+            StreamWriter writer = new StreamWriter(strFilename);
+            try
+            {
+                writer.Write(strMessage);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error creating/writing to file {0}:{1}",strFilename, ex.Message);
+            }
+            finally
+            {
+                writer.Close();
             }
         }
     }
