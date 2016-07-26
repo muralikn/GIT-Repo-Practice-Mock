@@ -18,7 +18,7 @@ namespace GITPracticeConsoleApplication
                 Console.WriteLine("Hello World");
 
                 // Intimate the users to input their name
-                Console.Write("Enter Your Name: No i wont");
+                Console.Write("Enter Your Name: ");
 
                 // Get user input from the console window
                 string strUserLine = Console.ReadLine();
@@ -33,7 +33,7 @@ namespace GITPracticeConsoleApplication
         // Function to print the arguments passed in command line
         private void PrintCommandLine(string[] cmdLineArgs)
         {
-            Console.WriteLine("Following were the commands that were sent as arguments:");
+            Console.WriteLine("Following were the {0} commands that were sent as arguments:", cmdLineArgs.Length);
             foreach (string strCmd in cmdLineArgs)
             {
                 Console.WriteLine(strCmd);
