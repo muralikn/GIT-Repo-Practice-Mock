@@ -34,8 +34,11 @@ namespace GITPracticeConsoleApplication
         private void PrintCommandLine(string[] cmdLineArgs)
         {
             Console.WriteLine("Following were the {0} commands that were sent as arguments:", cmdLineArgs.Length);
+
+            // Loop through to read each argument passed
             foreach (string strCmd in cmdLineArgs)
             {
+                // Print the argument to the console
                 Console.WriteLine(strCmd);
             }
         }
